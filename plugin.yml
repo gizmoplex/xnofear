@@ -1,0 +1,27 @@
+name: XNoFear
+main: com.gizmoplex.bukkit.XNoFearPlugin.XNoFearPlugin
+version: 0.1
+commands:
+  nofear:
+    description: Enable invincible mode.
+    usage: /nofear
+    permission: XNoFearPlugin.nofear
+    permission-message: You do not have permission to use the nofear command.
+  nofear-stop:
+    description: Disable invincible mode.
+    usage: /nofear-stop
+    permission: XNoFearPlugin.nofear-stop
+    permission-message: You do not have permission to use the nofear-stop command.
+permissions:
+  XNoFearPlugin.*:
+    description: Access to all "nofear" commands.
+    children:
+      XNoFearPlugin.nofear: true
+      XNoFearPlugin.nofear-stop: true
+  XNoFearPlugin.nofear:
+    description: Permission to enable invincible mode.
+    default: op
+  XNoFearPlugin.nofear-stop:
+    description: Permission to disable invincible mode.
+    default: op
+  
